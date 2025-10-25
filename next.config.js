@@ -11,7 +11,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
-    quality: 100,
   },
   compress: true,
   poweredByHeader: false,
