@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Couleur principale MaReconversionCPF */
+  --brand-primary: #33BAC6;
+  --brand-primary-light: #3BB7C1;
+  --brand-primary-dark: #2895A0;
+  --brand-primary-50: #E6F6F7;
+  --brand-primary-100: #CEEDF0;
+  --brand-primary-200: #9DDBE0;
+  --brand-primary-300: #6CC9D1;
+  --brand-primary-400: #3BB7C1;
+  --brand-primary-500: #33BAC6;
+  --brand-primary-600: #2895A0;
+  --brand-primary-700: #1E7078;
+  --brand-primary-800: #144A50;
+  --brand-primary-900: #0A2528;
+  
+  /* Charte graphique ACCERTIF */
+  --accertif-primary: #003566;
+  --accertif-secondary: #CCA000;
+  --accertif-primary-light: #0056b3;
+  --accertif-primary-dark: #002244;
+  --accertif-secondary-light: #FFD700;
+  --accertif-secondary-dark: #B8860B;
+}
+
+@layer base {
+  html {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  body {
+    @apply text-slate-900 bg-slate-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-900;
+  }
+  
+  /* Couleurs FORMAPRO BY ACCERTIF */
+  .text-brand {
+    @apply text-brand-500;
+  }
+  
+  .bg-brand {
+    @apply bg-brand-500;
+  }
+  
+  .border-brand {
+    @apply border-brand-500;
+  }
+  
+  .ring-brand {
+    @apply ring-brand-500;
+  }
+  
+  /* Classes spécifiques pour la couleur #33BAC6 */
+  .text-primary-brand {
+    color: var(--brand-primary);
+  }
+  
+  .bg-primary-brand {
+    background-color: var(--brand-primary);
+  }
+  
+  .border-primary-brand {
+    border-color: var(--brand-primary);
+  }
+  
+  .ring-primary-brand {
+    --tw-ring-color: var(--brand-primary);
+  }
+  
+  .hover\:bg-primary-brand:hover {
+    background-color: var(--brand-primary);
+  }
+  
+  .hover\:text-primary-brand:hover {
+    color: var(--brand-primary);
+  }
+  
+  .hover\:border-primary-brand:hover {
+    border-color: var(--brand-primary);
+  }
+  
+  /* Couleurs ACCERTIF */
+  .bg-accertif-primary {
+    background-color: var(--accertif-primary);
+  }
+  
+  .bg-accertif-secondary {
+    background-color: var(--accertif-secondary);
+  }
+  
+  .text-accertif-primary {
+    color: var(--accertif-primary);
+  }
+  
+  .text-accertif-secondary {
+    color: var(--accertif-secondary);
+  }
+  
+  .border-accertif-primary {
+    border-color: var(--accertif-primary);
+  }
+  
+  .border-accertif-secondary {
+    border-color: var(--accertif-secondary);
+  }
+  
+  .hover\:bg-accertif-primary:hover {
+    background-color: var(--accertif-primary-dark);
+  }
+  
+  .hover\:bg-accertif-secondary:hover {
+    background-color: var(--accertif-secondary-dark);
+  }
+  
+  /* Alias pour compatibilité */
+  .text-primary {
+    @apply text-brand-500;
+  }
+  
+  .bg-primary {
+    @apply bg-brand-500;
+  }
+  
+  .border-primary {
+    @apply border-brand-500;
+  }
+  
+  .ring-primary {
+    @apply ring-brand-500;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+  
+  /* Bouton principal avec couleur #33BAC6 */
+  .btn-primary-brand {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-color: var(--brand-primary);
+    box-shadow: 0 4px 6px -1px rgba(51, 186, 198, 0.3);
+  }
+  
+  .btn-primary-brand:hover {
+    background-color: var(--brand-primary-dark);
+    box-shadow: 0 10px 15px -3px rgba(51, 186, 198, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .btn-primary-brand:focus {
+    --tw-ring-color: var(--brand-primary);
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2;
+  }
+  
+  /* Boutons optimisés ACCERTIF */
+  .btn-accertif-primary {
+    @apply bg-accertif-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-accertif-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+  
+  .btn-accertif-secondary {
+    @apply bg-accertif-secondary text-accertif-primary px-8 py-3 rounded-lg font-semibold hover:bg-accertif-secondary-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+  
+  .btn-accertif-outline {
+    @apply border-2 border-accertif-primary text-accertif-primary px-8 py-3 rounded-lg font-semibold hover:bg-accertif-primary hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  /* Cards optimisées */
+  .card-enhanced {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-accertif-primary/20 hover:-translate-y-1;
+  }
+  
+  /* Cards avec couleur #33BAC6 */
+  .card-brand {
+    @apply bg-white rounded-xl shadow-lg transition-all duration-300 border border-gray-100;
+    border-left: 4px solid var(--brand-primary);
+  }
+  
+  .card-brand:hover {
+    @apply shadow-2xl -translate-y-1;
+    border-left-color: var(--brand-primary-dark);
+  }
+  
+  /* Badge avec couleur #33BAC6 */
+  .badge-brand {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: rgba(51, 186, 198, 0.1);
+    color: var(--brand-primary);
+    border: 1px solid rgba(51, 186, 198, 0.2);
+  }
+  
+  /* Input avec couleur #33BAC6 */
+  .input-brand {
+    @apply w-full px-3 py-2 border rounded-lg focus:outline-none transition-colors;
+    border-color: #d1d5db;
+  }
+  
+  .input-brand:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(51, 186, 198, 0.1);
+  }
+  
+  /* Liens optimisés */
+  .link-accertif-primary {
+    @apply text-accertif-primary hover:text-accertif-primary-dark font-medium transition-colors duration-200 hover:underline decoration-2 underline-offset-4;
+  }
+  
+  .link-accertif-secondary {
+    @apply text-accertif-secondary hover:text-accertif-secondary-dark font-medium transition-colors duration-200 hover:underline decoration-2 underline-offset-4;
+  }
+  
+  /* Optimisation de la largeur */
+  .container-wide {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1400px;
+  }
+  
+  .container-full {
+    @apply mx-auto px-4 sm:px-6 lg:px-12 xl:px-16;
+    max-width: 1600px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Optimisation des images pour éviter le flou */
+  .logo-sharp {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+  
+  /* Amélioration du rendu des logos */
+  img[alt*="Logo"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+}
