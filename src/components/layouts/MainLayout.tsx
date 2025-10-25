@@ -13,7 +13,7 @@ export function MainLayout({ children }: MainLayoutProps) {
       <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
         <div className="container">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center">
               <Image 
                 src="/logo.png" 
                 alt="MaReconversionCPF - Logo" 
@@ -24,7 +24,6 @@ export function MainLayout({ children }: MainLayoutProps) {
                 quality={100}
                 unoptimized={false}
               />
-              <span className="text-xl font-bold text-slate-900">MaReconversionCPF</span>
             </Link>
             <nav className="flex gap-1">
               <NavLink href="/">Accueil</NavLink>
